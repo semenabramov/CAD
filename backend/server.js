@@ -9,7 +9,7 @@ app.use(cors());
 
 // Явно обрабатываем preflight-запросы OPTIONS
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://semenabramov.github.io'); // Разрешаем запросы только от GitHub Pages
+  res.header('Access-Control-Allow-Origin', '*'); // Разрешаем запросы только от GitHub Pages
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   
