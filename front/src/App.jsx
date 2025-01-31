@@ -13,7 +13,7 @@ const App = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/triangulate', dimensions);
+      const response = await axios.post('https://cad-kdld.onrender.com', dimensions);
       setTriangles(response.data.triangles);
     } catch (error) {
       console.error('Error fetching triangulation data:', error);
