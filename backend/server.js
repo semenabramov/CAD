@@ -4,8 +4,15 @@ const cors = require('cors');
 const app = express();
 const PORT = 3001;
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+    origin: 'https://semenabramov.github.io'
+  }));
+  
+  app.use(express.json());
+  
+  app.get('/', (req, res) => {
+    res.send('Бэкенд работает!');
+  });
 
 const triangulateBox = (L, W, H) => {
     return [
