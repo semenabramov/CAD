@@ -5,7 +5,9 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors({
-    origin: 'https://semenabramov.github.io'
+    origin: 'https://semenabramov.github.io', 
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
   }));
   
   app.use(express.json());
